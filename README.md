@@ -1,7 +1,7 @@
-# Image Search with Text Prompt
+# Image Similarity Data Visualization
 by [Tony Assi](https://www.tonyassi.com/)
 
-Use text prompt to search for images in folders. It can search through folders within folders. Built with 🤗 Transformers and 🤗 Datasets.
+Create a 2d scatter plot data visualization of image similarity. All you need is a .csv of image urls.
 
 ## Installation
 ```bash
@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ## Usage
 Import the module
 ```python
-from ImageSearch import ImageSearch
+from ImSimVis import create_ds_app
 ```
 Define folder path
 - **image_dir** Parent folder

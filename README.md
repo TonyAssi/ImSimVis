@@ -23,3 +23,7 @@ create_ds_app(input_csv='image_urls.csv',
 	      token='YOUR_HF_TOKEN')
 ```
 The script will download images, generate image embeddings, upload the dataset to Hugging Face, and create a visualization app. It'll print out the URL to the dataset and app.
+
+[Example Dataset](https://huggingface.co/datasets/tonyassi/images-data-vis)
+
+[Example App](https://huggingface.co/spaces/tonyassi/images-data-vis-app)

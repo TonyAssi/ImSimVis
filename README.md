@@ -1,7 +1,7 @@
 # Image Similarity Data Visualization
 by [Tony Assi](https://www.tonyassi.com/)
 
-Create a 2d scatter plot data visualization of image similarity. All you need is a .csv of image urls.
+Create a 2d scatter plot data visualization of image similarity. All you need is a .csv file of image urls.
 
 ## Installation
 ```bash
@@ -13,42 +13,13 @@ Import the module
 ```python
 from ImSimVis import create_ds_app
 ```
-Define folder path
-- **image_dir** Parent folder
-- **hf_key** HuggingFace write access token can be created [here](https://huggingface.co/settings/tokens).
+
+- **input_csv** the .csv file containing your list of image urls (the columns must be called 'image_url')
+- **data_name** the name of the Hugging Face repo that the data and app will be uploaded to
+- **token** HuggingFace write access token can be created [here](https://huggingface.co/settings/tokens).
 ```python
-image_search = ImageSearch(image_dir='images',
-			   hf_key='HF_KEY')
+create_ds_app(input_csv='image_urls.csv',
+	      dataset_name='images-data-vis',
+	      token='YOUR_HF_TOKEN')
 ```
-The first time this is called the images will be converted to a 🤗 Dataset and it'll get uploaded to the 🤗 Hub. It'll print out the dataset id and store it in a meta.text file. It should look like [tonyassi/images-ds](https://huggingface.co/datasets/tonyassi/images-ds). It'll take a little longer the first time it's called. After the dataset is created it should be very quick.
-
-
-
-Search for image with text prompt
-- **text** Text prompt
-- **download_path** Images most similar to text prompt will be downloaded to this path (if download_path='' then images will not be downloaded)
-- **num** Number of images (optional) defaults to 5
-```python
-image_search.search(text='red rose',
-		    download_path = 'found_images',
-		    num=5)
-```
-The most similar images will be printed and downloaded.
-
-![0](https://github.com/user-attachments/assets/74f515c2-fec2-491a-96ba-be8d3b9427de)
-![1](https://github.com/user-attachments/assets/a5bcfa3f-fa75-455b-970d-38f7f28259c4)
-![2](https://github.com/user-attachments/assets/ccec1e8a-c750-4442-80d5-9c509b4470c2)
-
- ```
-flowers/0092.png
-Score: 142.48643
-Index: 0
-
-flowers/0105.png
-Score: 146.4621
-Index: 1
-
-flowers/0095.png
-Score: 148.10144
-Index: 2
-```
+The script will download images, generate image embeddings, upload the dataset to Hugging Face, and create a visualization app.

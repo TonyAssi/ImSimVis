@@ -2,6 +2,7 @@
 by [Tony Assi](https://www.tonyassi.com/)
 
 Create a 2d scatter plot data visualization of image similarity. All you need is a .csv file of image urls.
+<img width="1487" alt="Screenshot 2024-11-12 at 3 12 44 PM" src="https://github.com/user-attachments/assets/dc56a7f0-57f5-4075-a895-9f3dc946d7f0">
 
 ## Installation
 ```bash

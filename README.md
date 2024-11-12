@@ -14,7 +14,7 @@ Import the module
 from ImSimVis import create_ds_app
 ```
 
-- **input_csv** the .csv file containing your list of image urls (the columns must be called 'image_url')
+- **input_csv** the .csv file containing your list of image urls **(the column must be called 'image_url')**
 - **data_name** the name of the Hugging Face repo that the data and app will be uploaded to
 - **token** HuggingFace write access token can be created [here](https://huggingface.co/settings/tokens).
 ```python

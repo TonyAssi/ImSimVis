@@ -135,3 +135,12 @@ def create_ds_app(input_csv, dataset_name, token):
         repo_type="space",
         token=token
     )
+
+    print("""
+********* SUCCESS *******************
+    
+SUMMARY
+Dataset URL: """ + repo_url + """
+App URL: """ + space_url + """
+
+    """)
